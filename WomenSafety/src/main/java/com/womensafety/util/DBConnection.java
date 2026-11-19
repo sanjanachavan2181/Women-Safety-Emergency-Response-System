@@ -6,10 +6,14 @@ import java.sql.SQLException;
 
 /** JDBC connection helper. Change USER / PASSWORD to match your MySQL setup. */
 public class DBConnection {
-    private static final String URL =
-        "jdbc:mysql://localhost:3307/women_safety?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Kolkata";
-    private static final String USER = "root";
-    private static final String PASSWORD = "123456";   // <-- change this
+   private static final String URL =
+    System.getenv("DB_URL");
+
+private static final String USER =
+    System.getenv("DB_USER");
+
+private static final String PASSWORD =
+    System.getenv("DB_PASSWORD");   // <-- change this
 
     static {
         try { Class.forName("com.mysql.cj.jdbc.Driver"); }
