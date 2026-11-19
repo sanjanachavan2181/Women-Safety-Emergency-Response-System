@@ -50,7 +50,7 @@ CREATE TABLE IF NOT EXISTS admin_audit (
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
--- Default admin: username = admin , password = admin123  (change after first login)
+
 INSERT IGNORE INTO admins(username,password_hash) VALUES ('admin','65536:AAECAwQFBgcICQoLDA0ODw==:KgCG32zsYeYL2ZUca8RqEbVHZL8GanxoDlSDXXmo+78=');
 
 INSERT INTO safety_tips(title,description) VALUES
